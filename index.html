@@ -20,14 +20,10 @@
         .card-img-top:hover {
             transform: scale(1.1); 
         }
-         .navbar .container {
+       .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .navbar-toggler {
-            order: 2; /* Make sure it appears after the logo */
         }
 
         .navbar-brand {
@@ -35,8 +31,23 @@
             align-items: center;
         }
 
+        .navbar-toggler {
+            order: 2; /* Move hamburger menu to the right */
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
         .navbar-brand p {
-            margin-left: 10px; /* Add space between the logo and the text */
+            margin-left: 10px;
+        }
+
+        /* Hide the navbar toggle button on desktop */
+        @media (min-width: 992px) {
+            .navbar-toggler {
+                display: none;
+            }
         }
     </style>
 </head>
